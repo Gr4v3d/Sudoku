@@ -13,9 +13,11 @@
     ],
     "additionalProbingPaths": [
       "C:\\Users\\Piegzon\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Piegzon\\.nuget\\packages"
+      "C:\\Users\\Piegzon\\.nuget\\packages",
+      "E:\\VS - Shared\\NuGetPackages"
     ],
     "configProperties": {
+      "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
     }
   }

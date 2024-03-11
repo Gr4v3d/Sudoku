@@ -20,9 +20,24 @@ namespace Sudoku
     /// </summary>
     public partial class MainWindow : Window
     {
+        public string[] Macierz = new string [81];
+        
         public MainWindow()
         {
+            Macierz[0] = "xd";
             InitializeComponent();
+            this.DataContext = Macierz;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            for (int i = 0; i < Macierz.GetLength(0); i++)
+            {
+                for (int j = 0; j < Macierz.GetLength(1); j++)
+                {
+                    
+                }
+            }
         }
     }
 }
