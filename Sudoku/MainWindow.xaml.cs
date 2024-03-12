@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace Sudoku
 {
@@ -20,7 +21,7 @@ namespace Sudoku
     /// </summary>
     public partial class MainWindow : Window
     {
-        public string[,] numery = new string[9, 9];
+        public int[,] numery = new int[9, 9];
         public void TworzGrid()
         {
             for (int i = 0; i < 9; i++)
@@ -35,7 +36,7 @@ namespace Sudoku
                     TextBox tb = new TextBox();
                     string name = $"tb{i}{j}";
                     tb.Name = name;
-                    tb.Text = (i * 10 + j + 1).ToString();
+                    tb.Text = (i*10+(j+1)).ToString();
                     root.Children.Add(tb);
                     RegisterName(tb.Name, tb);
                     Grid.SetRow(tb, i);
@@ -45,6 +46,8 @@ namespace Sudoku
             root.RowDefinitions.Add(new RowDefinition());
             Button guzik = new Button();
             guzik.Content = "Guzior";
+            guzik.Name = "guzik";
+            RegisterName(guzik.Name,guzik);
             guzik.Click += new RoutedEventHandler(sprawdz);
             root.Children.Add(guzik);
             Grid.SetRow(guzik, 9);
@@ -57,16 +60,37 @@ namespace Sudoku
         }
         private void przypisz()
         {
-            /*for (int i = 0; i < 9; i++)
+            for (int i = 0; i < 9; i++)
             {
-                for (int j = 0; i < 9; j++)
-                {*/
-                    object objekt = (TextBox)root.FindName("tb00");
-
+                for (int j = 0; j < 9; j++)
+                {
+                    string name = "tb";
+                    name = name + i;
+                    name = name + j;
+                    object objekt = root.FindName(name);
                     TextBox tb = objekt as TextBox;
-                    tb.Text = "JEST";
-           //     }
-           // }
+                    tb.Background = null;
+                    try
+                    {
+                        int temp = Convert.ToInt32(tb.Text.ToString());
+                        if(temp <1 || temp > 10)
+                        {
+                            tb.Background = Brushes.Yellow;
+                        }
+                        else
+                        {
+                            numery[i,j] = temp;
+                        }
+                    }
+                    catch
+                    {
+                        tb.Background = Brushes.Red;
+                        object guzik = (Button)root.FindName("guzik");
+                        Button button = guzik as Button;
+                        button.Content = "Proszę podać liczbę całkowitą";
+                    }
+                }
+            }
 
         }
 
