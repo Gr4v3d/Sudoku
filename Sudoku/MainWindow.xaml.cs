@@ -20,24 +20,60 @@ namespace Sudoku
     /// </summary>
     public partial class MainWindow : Window
     {
-        public string[] Macierz = new string [81];
-        
-        public MainWindow()
+        public string[,] numery = new string[9, 9];
+        public void TworzGrid()
         {
-            Macierz[0] = "xd";
-            InitializeComponent();
-            this.DataContext = Macierz;
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            for (int i = 0; i < Macierz.GetLength(0); i++)
+            for (int i = 0; i < 9; i++)
             {
-                for (int j = 0; j < Macierz.GetLength(1); j++)
+                root.ColumnDefinitions.Add(new ColumnDefinition());
+            }
+            for (int i = 0; i < 9; i++)
+            {
+                root.RowDefinitions.Add(new RowDefinition());
+                for (int j = 0; j < 9; j++)
                 {
-                    
+                    TextBox tb = new TextBox();
+                    string name = $"tb{i}{j}";
+                    tb.Name = name;
+                    tb.Text = (i * 10 + j + 1).ToString();
+                    root.Children.Add(tb);
+                    RegisterName(tb.Name, tb);
+                    Grid.SetRow(tb, i);
+                    Grid.SetColumn(tb, j);
                 }
             }
+            root.RowDefinitions.Add(new RowDefinition());
+            Button guzik = new Button();
+            guzik.Content = "Guzior";
+            guzik.Click += new RoutedEventHandler(sprawdz);
+            root.Children.Add(guzik);
+            Grid.SetRow(guzik, 9);
+            Grid.SetColumn(guzik, 4);
+        }
+
+        private void sprawdz(object sender, RoutedEventArgs e)
+        {
+            przypisz();
+        }
+        private void przypisz()
+        {
+            /*for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; i < 9; j++)
+                {*/
+                    object objekt = (TextBox)root.FindName("tb00");
+
+                    TextBox tb = objekt as TextBox;
+                    tb.Text = "JEST";
+           //     }
+           // }
+
+        }
+
+        public MainWindow()
+        {
+            InitializeComponent();
+            TworzGrid();
         }
     }
 }
