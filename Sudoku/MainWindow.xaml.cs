@@ -23,6 +23,7 @@ namespace Sudoku
     public partial class MainWindow : Window
     {
         public int[,] numery = new int[9, 9];
+        public TextBox[,] okna = new TextBox[9, 9];
         public void TworzGrid()
         {
             for (int i = 0; i < 9; i++)
@@ -31,8 +32,9 @@ namespace Sudoku
             }
             for (int i = 0; i < 9; i++)
             {
+                //Przesuń do loopa wyżej
                 root.RowDefinitions.Add(new RowDefinition());
-                for (int j = 0; j < 9; j++)
+                for (int j = 0; j < 9; j++) //Zrób z tego metode
                 {
                     TextBox tb = new TextBox();
                     string name = $"tb{i}{j}";
@@ -42,6 +44,7 @@ namespace Sudoku
                     RegisterName(tb.Name, tb);
                     Grid.SetRow(tb, i);
                     Grid.SetColumn(tb, j);
+                    okna[i,j] = tb;
                 }
             }
             root.RowDefinitions.Add(new RowDefinition());
@@ -71,29 +74,7 @@ namespace Sudoku
             {
                 for(int j = 0; j < 3; j++)
                 {
-                    List<int> Search = new List<int>();
-                    bool problem = false;
-                    for(int k =  0; k < 3; k++)
-                    {
-                        for(int l = 0; l < 3; l++)
-                        {
-                            if (k == 0 && l == 0)
-                            {
-                                Search.Add(numery[k+(3*i), l+(3*j)]);
-                                continue;
-                            }
-                            foreach (int item in Search)
-                            {
-                                if (item == numery[k + (3 * i), l + (3 * j)]) problem = true; break;
-                            }
-                            if (problem)
-                            {
-                                ErrorInABox(i,j);
-                                break;
-                            }
-                            Search.Add(numery[k + (3 * i), l + (3 * j)]);
-                        }
-                    }
+                    ErrorInABox(i, j);
                 }
             }
             //Przeszukanie po Rzędach
@@ -142,28 +123,24 @@ namespace Sudoku
             {
                 for (int j = 0; j < 9; j++)
                 {
-                    string name = "tb";
+                    /*string name = "tb";
                     name = name + i;
                     name = name + j;
                     object objekt = root.FindName(name);
                     TextBox tb = objekt as TextBox;
-                    tb.Background = null;
+                    tb.Background = null;*/
                     try
                     {
-                        int temp = Convert.ToInt32(tb.Text.ToString());
+                        int temp = Convert.ToInt32(okna[i,j].Text);
                         if(temp <1 || temp > 10)
                         {
-                            tb.Background = Brushes.Red;
+                            okna[i,j].Background = Brushes.Red;
                             CzyJestOk = false;
-                        }
-                        else
-                        {
-                            numery[i,j] = temp;
                         }
                     }
                     catch
                     {
-                        tb.Background = Brushes.DarkRed;
+                        okna[i,j].Background = Brushes.DarkRed;
                         object guzik = (Button)root.FindName("guzik");
                         Button button = guzik as Button;
                         button.Content = "Proszę podać liczbę całkowitą";
@@ -179,32 +156,30 @@ namespace Sudoku
         {
             for (int i = 0; i < 9; i++)
             {
-                string name = $"tb{i}{index}";
-                object objekt = root.FindName(name);
-                TextBox tb = objekt as TextBox;
-                tb.Background = Brushes.Yellow;
+                //okna[index,i].Background = Brushes.Yellow;
             }
         }
         private void ErrorInAColumn(int index)
         {
             for(int i = 0; i < 9; i++)
             {
-                string name = $"tb{index}{i}";
-                object objekt = root.FindName(name);
-                TextBox tb = objekt as TextBox;
-                tb.Background = Brushes.Orange;
+                //okna[i, index].Background = Brushes.Orange;
             }
         }
+        // Wysokość i szerokość musi być od 0 - 2 żeby działało zapamiętaj
         private void ErrorInABox(int height,int width)
         {
+            List<string> znaneWartosci = new List<string>();
             for (int i = 0; i < 3; i++)
             {
                 for(int j = 0; j < 3; j++)
                 {
-                    string name = $"tb{height*3+i}{width*3+j}";
-                    object objekt = root.FindName(name);
-                    TextBox tb = objekt as TextBox;
-                    tb.Background = Brushes.OrangeRed;
+                    int row = i + (height * 3);
+                    int column = j + (width * 3);
+                    foreach (string item in znaneWartosci)
+                    {
+                        if(item == okna[row, column].Text) okna[row,column].Background = Brushes.DarkOrange;
+                    }
                 }
             }
         }
