@@ -19,3 +19,6 @@ E:\Dokumenty\P4\Sudoku\Sudoku\Sudoku\obj\Debug\net7.0-windows\Sudoku.pdb
 E:\Dokumenty\P4\Sudoku\Sudoku\Sudoku\obj\Debug\net7.0-windows\Sudoku.genruntimeconfig.cache
 E:\Dokumenty\P4\Sudoku\Sudoku\Sudoku\obj\Debug\net7.0-windows\ref\Sudoku.dll
 E:\Dokumenty\P4\Sudoku\Sudoku\Sudoku\obj\Debug\net7.0-windows\Sudoku.sourcelink.json
+E:\Dokumenty\P4\Sudoku\Sudoku\Sudoku\obj\Debug\net7.0-windows\HomeScreen.g.cs
+E:\Dokumenty\P4\Sudoku\Sudoku\Sudoku\obj\Debug\net7.0-windows\HomeScreen.baml
+E:\Dokumenty\P4\Sudoku\Sudoku\Sudoku\obj\Debug\net7.0-windows\App.baml

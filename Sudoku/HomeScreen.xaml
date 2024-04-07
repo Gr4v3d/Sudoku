@@ -1,0 +1,16 @@
+﻿<Window x:Class="Sudoku.HomeScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sudoku"
+        mc:Ignorable="d"
+        Title="HomeScreen" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72"><Run Language="pl-pl" Text="SUDOKU"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="323,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Proszę wpisać ilość"/><Run Language="pl-pl" Text=" podpwoiedzi: "/></TextBlock>
+        <TextBlock HorizontalAlignment="Center" Margin="0,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" Height="112"><Run Language="pl-pl" Text="Im mniej podpowiedzi tym ciężej jest wygrać"/><LineBreak/><Run Language="pl-pl" Text="0 - Brak podpowiedzi"/><LineBreak/><Run Language="pl-pl" Text="17 - Minimalna ilość podpowiedzi wymagana aby było tylko jedno rozwiązanie"/><LineBreak/><Run Language="pl-pl" Text="81 - Rozwiązane Sudoku"/></TextBlock>
+        <TextBox HorizontalAlignment="Center" Margin="0,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="Input"/>
+        <Button Content="Graj" HorizontalAlignment="Center" Margin="0,178,0,0" VerticalAlignment="Top" Width="80" Click="Button_Click"/>
+    </Grid>
+</Window>

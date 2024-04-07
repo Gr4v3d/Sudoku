@@ -7,6 +7,22 @@
       "RelativeMoniker": "D:0:0:{0483DCC6-43BA-46F2-9815-DB0FB54E2084}|Sudoku\\Sudoku.csproj|solutionrelative:sudoku\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0483DCC6-43BA-46F2-9815-DB0FB54E2084}|Sudoku\\Sudoku.csproj|e:\\dokumenty\\p4\\sudoku\\sudoku\\sudoku\\homescreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0483DCC6-43BA-46F2-9815-DB0FB54E2084}|Sudoku\\Sudoku.csproj|solutionrelative:sudoku\\homescreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0483DCC6-43BA-46F2-9815-DB0FB54E2084}|Sudoku\\Sudoku.csproj|e:\\dokumenty\\p4\\sudoku\\sudoku\\sudoku\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0483DCC6-43BA-46F2-9815-DB0FB54E2084}|Sudoku\\Sudoku.csproj|solutionrelative:sudoku\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0483DCC6-43BA-46F2-9815-DB0FB54E2084}|Sudoku\\Sudoku.csproj|e:\\dokumenty\\p4\\sudoku\\sudoku\\sudoku\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0483DCC6-43BA-46F2-9815-DB0FB54E2084}|Sudoku\\Sudoku.csproj|solutionrelative:sudoku\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0483DCC6-43BA-46F2-9815-DB0FB54E2084}|Sudoku\\Sudoku.csproj|e:\\dokumenty\\p4\\sudoku\\sudoku\\sudoku\\homescreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0483DCC6-43BA-46F2-9815-DB0FB54E2084}|Sudoku\\Sudoku.csproj|solutionrelative:sudoku\\homescreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0483DCC6-43BA-46F2-9815-DB0FB54E2084}|Sudoku\\Sudoku.csproj|e:\\dokumenty\\p4\\sudoku\\sudoku\\sudoku\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{0483DCC6-43BA-46F2-9815-DB0FB54E2084}|Sudoku\\Sudoku.csproj|solutionrelative:sudoku\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
@@ -18,8 +34,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml",
+              "DocumentMoniker": "E:\\Dokumenty\\P4\\Sudoku\\Sudoku\\Sudoku\\App.xaml",
+              "RelativeDocumentMoniker": "Sudoku\\App.xaml",
+              "ToolTip": "E:\\Dokumenty\\P4\\Sudoku\\Sudoku\\Sudoku\\App.xaml",
+              "RelativeToolTip": "Sudoku\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-07T12:20:22.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "E:\\Dokumenty\\P4\\Sudoku\\Sudoku\\Sudoku\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Sudoku\\App.xaml.cs",
+              "ToolTip": "E:\\Dokumenty\\P4\\Sudoku\\Sudoku\\Sudoku\\App.xaml.cs",
+              "RelativeToolTip": "Sudoku\\App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T12:20:19.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeScreen.xaml.cs",
+              "DocumentMoniker": "E:\\Dokumenty\\P4\\Sudoku\\Sudoku\\Sudoku\\HomeScreen.xaml.cs",
+              "RelativeDocumentMoniker": "Sudoku\\HomeScreen.xaml.cs",
+              "ToolTip": "E:\\Dokumenty\\P4\\Sudoku\\Sudoku\\Sudoku\\HomeScreen.xaml.cs",
+              "RelativeToolTip": "Sudoku\\HomeScreen.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAgwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T11:31:53.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeScreen.xaml",
+              "DocumentMoniker": "E:\\Dokumenty\\P4\\Sudoku\\Sudoku\\Sudoku\\HomeScreen.xaml",
+              "RelativeDocumentMoniker": "Sudoku\\HomeScreen.xaml",
+              "ToolTip": "E:\\Dokumenty\\P4\\Sudoku\\Sudoku\\Sudoku\\HomeScreen.xaml",
+              "RelativeToolTip": "Sudoku\\HomeScreen.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-07T11:30:07.999Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,14 +94,14 @@
               "RelativeDocumentMoniker": "Sudoku\\MainWindow.xaml.cs",
               "ToolTip": "E:\\Dokumenty\\P4\\Sudoku\\Sudoku\\Sudoku\\MainWindow.xaml.cs",
               "RelativeToolTip": "Sudoku\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAJoAAAAAAAAAAAA7wGIAAAAnAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-04T20:37:49.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "E:\\Dokumenty\\P4\\Sudoku\\Sudoku\\Sudoku\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Sudoku\\MainWindow.xaml",
