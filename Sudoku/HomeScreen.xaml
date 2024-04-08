@@ -12,5 +12,6 @@
         <TextBlock HorizontalAlignment="Center" Margin="0,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" Height="112"><Run Language="pl-pl" Text="Im mniej podpowiedzi tym ciężej jest wygrać"/><LineBreak/><Run Language="pl-pl" Text="0 - Brak podpowiedzi"/><LineBreak/><Run Language="pl-pl" Text="17 - Minimalna ilość podpowiedzi wymagana aby było tylko jedno rozwiązanie"/><LineBreak/><Run Language="pl-pl" Text="81 - Rozwiązane Sudoku"/></TextBlock>
         <TextBox HorizontalAlignment="Center" Margin="0,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="Input"/>
         <Button Content="Graj" HorizontalAlignment="Center" Margin="0,178,0,0" VerticalAlignment="Top" Width="80" Click="Button_Click"/>
+        <Button Content="Jak Grać" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Width="80" Click="Button_Click_1"/>
     </Grid>
 </Window>

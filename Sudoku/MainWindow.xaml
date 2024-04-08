@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Sudoku"
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="800">
-    <Grid x:Name="root" ShowGridLines="True">
+    <Grid x:Name="root" ShowGridLines="False">
 
     </Grid>
 </Window>

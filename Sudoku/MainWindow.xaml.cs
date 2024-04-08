@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Common;
-using System.Diagnostics.Metrics;
-using System.Runtime.CompilerServices;
+using System.Diagnostics;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -14,17 +13,16 @@ namespace Sudoku;
 /// </summary>
 public partial class MainWindow : Window
 {
-    protected override void OnClosed(EventArgs e)
-    {
-        base.OnClosed(e);
-
-        Application.Current.Shutdown();
-    }
     const int SizeOfGrid = 9;
     int SRSize = (int)Math.Floor(Math.Sqrt(SizeOfGrid));
     public int[,] Numbers = new int[9, 9];
     public TextBox[,] TextBoxes = new TextBox[9, 9];
-    
+    protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
+    {
+        Application.Current.MainWindow.Show();
+
+        base.OnClosing(e);
+    }
     void CreateMesh()
     {
         for (int i = 0; i < SizeOfGrid; i++)
@@ -73,8 +71,6 @@ public partial class MainWindow : Window
             switch (EndOfGame())
             {
                 case MessageBoxResult.Yes:
-                    var start = new HomeScreen();
-                    start.Show();
                     this.Close();
                     break;
                 case MessageBoxResult.No:
